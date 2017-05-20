@@ -1,0 +1,192 @@
+// ==========================================================================
+// Base
+// ==========================================================================
+
+// Reset
+// ==========================================================================
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+    display: block
+
+strong, b
+    font-weight: bold
+
+i, em, blockquote
+    font-style: italic
+
+html, body
+    min-height: 100%
+
+html
+    -webkit-text-size-adjust: 100%
+    -ms-text-size-adjust: 100%
+    background: $white
+    overflow-y: scroll
+
+img
+    -ms-interpolation-mode: bicubic
+    background: transparent
+    border: 0
+
+img, embed, object, video
+    max-width: 100%
+    height: inherit
+    _width: 100%
+
+img
+    display: block
+
+// Selections
+// ==========================================================================
+
+::-moz-selection
+    background: $gray
+    color: $black
+    text-shadow: none
+
+::selection
+    background: $gray
+    color: $black
+    text-shadow: none
+
+::selection:window-inactive
+    background: $grayLight
+    color: $gray
+
+img::selection
+    background: transparent
+
+img::-moz-selection
+    background: transparent
+
+// Base Typography
+// ==========================================================================
+
+body
+    margin: 0 auto
+    font: $baseFontSize $fontFamily
+    color: $black
+    font-size: 100%
+    background: $grayLightest
+
+p, ul, ol, dl, blockquote, .content img
+    margin: 0
+    -webkit-hyphens: auto
+    -moz-hyphens: auto
+    hyphens: auto
+    font-size: 1.2rem
+    font-weight: 100
+    line-height: 1.8rem
+    color: $gray
+
+blockquote
+    text-align: right
+    position: relative
+    font-size: 4rem
+    margin: 1.5em 0 1.5em 1.80203em
+    color: $gray
+
+blockquote:before
+    position: absolute
+    left: -0.60180em
+    top: 0
+    -webkit-font-smoothing: antialiased
+    color: $gray
+    font-size: 3.60406em
+    font-style: italic
+    content: "\201C"
+
+b
+    font-weight: 400
+
+// Lists
+
+ul, ol
+    padding: 0
+    margin: 0 0 ($baseLineHeight / 2) 25px
+
+ul ul, ul ol, ol ol, ol ul
+    margin-bottom: 0
+
+li
+    line-height: $baseLineHeight
+
+// Headings
+
+h1, h2, h3, h4, h5, h6
+    -moz-font-feature-settings: "liga=1, kern=1"
+    -ms-font-feature-settings: "liga" 1, "kern" 1
+    text-rendering: optimizeLegibility
+    font-weight: normal
+
+h1
+    line-height: 3.5rem
+    font-size: 5rem
+    text-transform: uppercase
+    font-weight: 800
+    color: $white
+    letter-spacing: 0.1em
+h2
+    font-size: 3rem
+    font-weight: 300
+
+h3
+    font-size: ($baseFontSize * 1.75)
+    font-size: 2.5rem
+
+h4
+    font-size: ($baseFontSize * 1.25)
+    font-size: 2rem
+    color: $gray
+    font-weight: 100
+    text-align: center
+    margin-bottom: 15px
+
+h5
+    font-size: $baseFontSize
+    font-size: 1.3rem
+    font-weight: 400
+    color: $gray
+
+h6
+    font-size: ($baseFontSize * 0.85)
+    font-size: 1.6rem
+    color: $gray
+    font-weight: 100
+
+// Links
+
+a
+    text-decoration: none
+    color: $purple
+    +transition-property(color)
+    +transition-duration(0.25s)
+    +transition-timing-function(ease-in)
+    &:hover
+        color: $pink
+        +transition-property(color)
+        +transition-duration(0.25s)
+        +transition-timing-function(ease-in)
+    &:active
+        outline: none

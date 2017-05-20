@@ -1,0 +1,248 @@
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+.container
+    +container
+
+    .four
+        +span-columns(4, 12)
+        img
+            +border-top-radius(3px)
+    .four.omega
+        +span-columns(4 omega, 12)
+    .twelve
+        +span-columns(12 omega,12)
+    .seven
+        +span-columns(7 ,12)
+    .five
+        +span-columns(5,12)
+    .seven.omega
+        +span-columns(7 omega,12)
+    .six
+        +span-columns(6,12)
+    .six.omega
+        +span-columns(6 omega,12)
+
++breakpoint(small)
+    .container
+        +container
+
+        .four, .four.omega, .seven, .five, .seven.omega, .six, .six.omega
+            +span-columns(12 omega,12)
+
+    .margin-top__responsive
+        margin-top: 35px
+
+    footer
+        text-align: center
+    .contact-info
+        text-align: center!important
+        margin-top: 25px
+    .contact-details
+        font-size: 1.5rem!important
+    .history-overview__left
+        border-bottom: 1px solid $grayLighter
+        border-left: 1px solid $grayLighter
+        border-right: 1px solid $grayLighter
+        +border-bottom-radius(3px)
+        padding: 40px 25px
+        background: $white
+        width: 91.6%!important
+    .gallery-left
+        img
+            +border-bottom-radius(0px !important)
+            display: inline-block
+            float: left
+    .center
+        padding: 0px!important
+
+
+// ==========================================================================
+// Margins
+// ==========================================================================
+
+.margin-top
+    margin-top: 75px
+
+.margn-top__small
+    margin-top: 35px
+
+.margn-top__smaller
+    margin-top: 25px
+
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+.color
+    color: $purple
+
+.gray-lighter
+    background: $grayLightest
+    padding: 75px 0
+    border-top: 1px solid lighten($grayLight, 10%)
+    border-bottom: 1px solid lighten($grayLight, 10%)
+
+.white
+    background: $grayLightest
+    padding: 75px 0
+    text-align: center
+    border-bottom: 1px solid lighten($grayLight, 10%)
+
+.center
+    text-align: center
+    padding: 0 100px
+
+// ==========================================================================
+// Header
+// ==========================================================================
+
+header
+    background: url(../img/header.jpg) no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    width: 100%
+    height: 500px
+    display: block
+    text-align: center
+
+.header-aanbod
+    background: url(../img/header-aanbod.jpg) no-repeat center center
+
+.header-grapes
+    height: 125px
+    display: inline-block
+    color: $white
+    padding-bottom: 25px
+    margin-top: 100px
+
+.header-tagline
+    color: $white
+    font-size: 2em
+    font-weight: 100
+    letter-spacing: 0.1em
+    border-top: 1px solid $white
+    padding-top: 20px
+    margin-top: 20px
+    display: inline-block
+
+.subheader-order
+    text-align: center
+    padding: 75px 0
+    a
+        font-size: 1em
+        letter-spacing: 0.03rem
+        text-transform: uppercase
+        color: $white
+        padding: 20px 30px
+        +border-radius(3px)
+        font-weight: 100
+        margin-top: 20px
+        display: inline-block
+        background: lighten($green, 10%)
+        +transition-property(background)
+        +transition-duration(0.25s)
+        +transition-timing-function(ease-in)
+        &:hover
+            background: $green
+            +transition-property(background)
+            +transition-duration(0.25s)
+            +transition-timing-function(ease-in)
+
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+.subheader
+    background: $grayLighter
+    border-bottom: 1px solid lighten($grayLight, 10%)
+
+.middle
+    text-align: center
+    margin-bottom: 25px
+
+.facebook-sign
+    display: inline-block
+    text-align: center
+    margin-top: 25px
+    i
+        font-size: 2rem
+
+.history-overview
+    border-bottom: 1px solid $grayLighter
+    border-left: 1px solid $grayLighter
+    border-right: 1px solid $grayLighter
+    +border-bottom-radius(3px)
+    padding: 40px 25px
+    background: $white
+
+.history-overview__left
+    border-right: 1px solid $grayLighter
+    border-top: 1px solid $grayLighter
+    border-bottom: 1px solid $grayLighter
+    +border-right-radius(3px)
+    padding: 40.5px 4%
+    background: $white
+    display: inline-block
+    width: 43%
+    height: 100%
+    margin: 0
+    float: left
+
+.history-desc
+    margin-top: 20px
+
+.image-jil
+    +border-radius(3px)
+
+.gallery-high
+    padding-top: 75px
+    img
+        +border-top-radius(3px)
+
+.gallery-left
+    padding-top: 30px
+    img
+        +border-left-radius(3px)
+        display: inline-block
+        float: left
+
+.gallery-bottom
+    padding-top: 75px
+    img
+        +border-left-radius(3px)
+        display: inline-block
+        float: left
+
+footer
+    background: $grayLighter
+    color: $gray
+    line-height: 1.4rem
+    padding: 50px 0
+    p
+        font-size: 1.2rem
+        font-weight: 100
+        line-height: 1.6rem
+    a
+        color: $purple
+
+.contact-info
+    text-align: right
+
+.contact-details__wrapper
+    text-align: center
+    margin: 25px 0 0 0
+    padding: 25px 0
+    background: $grayLighter
+
+.contact-details
+    font-size: 2rem
+    display: inline-block
+    color: $purple
+    font-weight: 500
+    text-align: center
+    padding: 0 10px

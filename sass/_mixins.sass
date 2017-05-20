@@ -1,0 +1,35 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// px fallback font for rem
+
+=font-size($val)
+    font-size: ($sizeValue * 10) + px
+    font-size: $sizeValue + rem
+
+// Handling breakpoints for media queries
+
+=breakpoint($point)
+    @if $point == extra-large
+        @media (max-width: 1200px)
+            @content
+    @else if $point == large
+        @media (min-width: 768px) and (max-width: 992px)
+            @content
+    @else if $point == medium
+        @media (max-width: 767px)
+            @content
+    @else if $point == small
+        @media (max-width: 480px)
+            @content
+
+// Handling images for Retina, example: +at2x(name-image, 20px, 20px)
+
+=at2x($image_name, $w: auto, $h: auto, $extention: '.png')
+    background-image: image-url($image_name + $extention)
+    $x2img : $image_name + '@2x' + $extention
+
+    @media all and (-webkit-min-device-pixel-ratio : 1.5)
+        background-image: image-url($x2img)
+        background-size: $w $h
